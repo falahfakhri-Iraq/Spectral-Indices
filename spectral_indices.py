@@ -118,7 +118,7 @@ def DBI(swinr1, green):
     parameters
     ----------
     swinr1: SWINR1 band as input
-    red: RED band as input
+    green: green band as input
     """
     DBI = ((swinr1.astype('float') - green.astype('float')) / (swinr1.astype('float') + green.astype('float'))) - ndvi
             
@@ -151,7 +151,7 @@ def MNDWI(green, swinr1):
     return MNDWI
   
  
-def NDBI(swir, red):
+def NDBI(swir, nir):
     """Calculate Normalized Difference Built-up Index
     
     parameter
